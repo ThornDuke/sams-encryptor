@@ -1,9 +1,28 @@
 # Change Log
 
-All notable changes to the "sams-file-encryptor" extension will be documented in this file.
-
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+<!--
+## [major.minor.patch] - yyyy-mm-dd
+### Added
+- filena.me {method}: description
+### Fixed
+### Changed
+### Removed
+-->
 
 ## [Unreleased]
 
-- Initial release
+- 2024-01-31: First scratch
+
+### Added
+
+- CHANGELOG.md: created and structured
+- project-notes.md: created and structured
+- package.json: created and configured
+- .gitignore: created and configured
+- .eslintrc.json: created and configured
+- .vscodeignore: created and configured
+- tsconfig.json: created and configured
+- LICENCE: created
+- Icon
+- src/globals.ts: created
+- src/globals.ts {getConfigValueAtKey}: created

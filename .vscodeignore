@@ -10,3 +10,5 @@ project-notes.md
 **/*.map
 **/*.ts
 **/.vscode-test.*
+**/*.gif
+

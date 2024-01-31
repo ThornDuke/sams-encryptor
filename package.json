@@ -1,13 +1,26 @@
 {
   "name": "sams-file-encryptor",
-  "displayName": "Sams File Encryptor",
+  "displayName": "Sam's File Encryptor",
   "description": "A strong file encryptor/decryptor for VSCode",
+  "author": "Thorn Duke",
+  "publisher": "ThornDuke",
   "version": "0.0.1",
+  "icon": "resources/encryption.png",
+  "galleryBanner": {
+    "theme": "dark",
+    "color": "#001b33"
+  },
+  "license": "LICENCE",
   "engines": {
     "vscode": "^1.85.0"
   },
   "categories": [
     "Other"
+  ],
+  "keywords": [
+    "security",
+    "encryption",
+    "decryption"
   ],
   "activationEvents": [],
   "main": "./out/extension.js",
@@ -19,13 +32,30 @@
       }
     ]
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ThornDuke/sams-encryptor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ThornDuke/sams-encryptor/issues"
+  },
+  "homepage": "https://github.com/ThornDuke/sams-encryptor#readme",
+  "pricing": "Free",
   "scripts": {
-    "vscode:prepublish": "npm run compile",
+    "vscode:prepublish": "npm run esbuild-base -- --minify",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
-    "pretest": "npm run compile && npm run lint",
     "lint": "eslint src --ext ts",
-    "test": "vscode-test"
+    "pretest": "tsc -p ./",
+    "test": "vscode-test",
+    "esbuild-base": "esbuild ./src/extension.ts --bundle --outfile=out/main.js --external:vscode --format=cjs --platform=node",
+    "esbuild": "npm run esbuild-base -- --sourcemap",
+    "esbuild-watch": "npm run esbuild-base -- --sourcemap --watch",
+    "test-compile": "tsc -p ./",
+    "publish:prerelease": "vsce publish --githubBranch master --pre-release",
+    "publish": "vsce publish --githubBranch master",
+    "pack:prerelease": "vsce pack --githubBranch master --pre-release",
+    "pack": "vsce pack --githubBranch master"
   },
   "devDependencies": {
     "@types/vscode": "^1.85.0",
@@ -36,6 +66,7 @@
     "eslint": "^8.56.0",
     "typescript": "^5.3.3",
     "@vscode/test-cli": "^0.0.4",
-    "@vscode/test-electron": "^2.3.8"
+    "@vscode/test-electron": "^2.3.8",
+    "esbuild": "^0.19.11"
   }
 }
