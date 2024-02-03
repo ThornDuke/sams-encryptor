@@ -14,7 +14,6 @@
 
 ## Table of content
 
-- [Table of content](#table-of-content)
 - [Features](#features)
 - [Requirements](#requirements)
 - [Installation](#installation)
@@ -26,6 +25,8 @@
 - [Acknowledgements](#acknowledgements)
 
 ## Features
+
+- <https://www.kiteworks.com/risk-compliance-glossary/aes-256-encryption/#:~:text=AES%2D256%20encryption%20is%20extremely%20secure.>
 
 [Back to [table of content](#table-of-content)]
 

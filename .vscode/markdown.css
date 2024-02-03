@@ -1,6 +1,8 @@
-h1,
-hr {
+h1 {
   border-bottom: 3px solid whitesmoke;
+}
+hr {
+  border-bottom: 2px solid whitesmoke;
 }
 a {
   color: #ffa5a5;

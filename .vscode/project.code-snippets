@@ -8,7 +8,7 @@
       "<!--",
       "## [major.minor.patch] - yyyy-mm-dd",
       "### Added",
-      "- filena.me {function}: description",
+      "- filena.me {section}: description",
       "### Fixed",
       "### Changed",
       "### Removed",
@@ -47,7 +47,7 @@
   "New Log Item": {
     "scope": "markdown",
     "prefix": "changelog-new-item",
-    "body": ["- ${1:filename}${2: {${3:function}\\}}: ${4:description}"],
+    "body": ["- ${1:filename}${2: {${3:section}\\}}: ${4:description}"],
     "description": "Insert a new log item"
   },
   "Initialize README.md": {
@@ -56,13 +56,7 @@
     "body": [
       "# ${1:Extension name}",
       "",
-      "<!--",
-      "Extension description:",
-      "",
-      "- What your application does",
-      "- Why you used the technologies you used",
-      "- Some of the challenges you faced and features you hope to implement in the future",
-      "-->",
+      "<!-- Extension description -->",
       "",
       "## Features",
       "",

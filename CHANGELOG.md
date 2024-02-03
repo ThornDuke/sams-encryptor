@@ -3,13 +3,17 @@
 <!--
 ## [major.minor.patch] - yyyy-mm-dd
 ### Added
-- filena.me {method}: description
+- filena.me {section}: description
 ### Fixed
 ### Changed
 ### Removed
+-->
 
 ## [Unreleased]
--->
+
+### Removed
+
+- README.md {Table of content}: auto-link
 
 ## [0.1.0] - 2024-02-03
 
