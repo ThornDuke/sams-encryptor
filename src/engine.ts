@@ -7,51 +7,44 @@
  * First edit: 2024-02-03
  */
 
-import crypto from 'node:crypto';
-import { $$debugging } from './globals';
+// import crypto from 'node:crypto';
+import CryptoShield from 'crypto-shield';
+import { $$debugging, $$logErrors } from './globals';
 
-const algorithm = 'aes-256-cbc';
+export const encrypted = async (text: any, pwKey: string) => {
+  const encryptor = new CryptoShield();
+  encryptor.setSecretKey(pwKey);
 
-const getCipher = (key: string) => {
-  const cipher = crypto.createCipher(algorithm, key);
+  try {
+    const encryptedText = await encryptor.encryptText(text);
 
-  if ($$debugging) {
-    console.log('§> getCipher', { key, cipher });
+    if ($$debugging) {
+      console.log('§> encrypted', { text, pwKey, encryptedText });
+    }
+
+    return encryptedText;
+  } catch (error) {
+    if ($$logErrors) {
+      console.error('§> encrypted() Error:', error);
+    }
   }
-
-  return cipher;
 };
 
-const getDecipher = (key: string) => {
-  const decipher = crypto.createDecipher(algorithm, key);
+export const decrypted = async (text: any, pwKey: string) => {
+  const decryptor = new CryptoShield();
+  decryptor.setSecretKey(pwKey);
 
-  if ($$debugging) {
-    console.log('§> getdecipher', { key, decipher });
+  try {
+    const decryptedText = await decryptor.decryptText(text);
+
+    if ($$debugging) {
+      console.log('§> decrypted', { text, pwKey, decryptedText });
+    }
+
+    return decryptedText;
+  } catch (error) {
+    if ($$logErrors) {
+      console.error('§> decrypted() Error:', error);
+    }
   }
-
-  return decipher;
-};
-
-export const encrypted = (text: string, pw: string) => {
-  const cipher = getCipher(pw);
-  let encryptedText = cipher.update(text, 'utf8', 'hex');
-  encryptedText += cipher.final('hex');
-
-  if ($$debugging) {
-    console.log('§> ecrypted', { text, pw, cipher, encryptedText });
-  }
-
-  return encryptedText;
-};
-
-export const decrypted = (text: string, pw: string) => {
-  const decipher = getDecipher(pw);
-  let decryptedText = decipher.update(text, 'hex', 'utf8');
-  decryptedText += decipher.final('utf8');
-
-  if ($$debugging) {
-    console.log('§> deecrypted', { text, pw, decipher, decryptedText });
-  }
-
-  return decryptedText;
 };

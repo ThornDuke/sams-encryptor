@@ -17,10 +17,18 @@
 - package.json {contributes.commands}: encrypt; decrypt
 - extension.ts {encryptCurrentFile}
 - extension.ts {decryptCurrentFile}
+- Now use CryptoShield
+
+### Changed
+
+- engine.ts {encrypted}
+- engine.ts {decrypted}
 
 ### Removed
 
 - README.md {Table of content}: auto-link
+- engine.ts {getCipher}: rendered useless by CryptoShield
+- engine.ts {getDecipher}: rendered useless by CryptoShield
 
 ## [0.1.0] - 2024-02-03
 

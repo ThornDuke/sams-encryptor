@@ -15,32 +15,23 @@ import * as engine from './engine';
  *
  * https://github.com/Microsoft/vscode-extension-samples/tree/main/document-editing-sample
  *
+ * a library that abstracts upon crypto
+ *
+ * https://www.npmjs.com/package/crypto-shield?activeTab=readme
+ *
  */
 
-const encryptCurrentFile = () => {
-  const editor = vscode.window.activeTextEditor;
+const text =
+  'Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa.';
+const pw = 'sammarino';
 
-  if (editor) {
-    let document = editor.document;
-
-    // Get the document text
-    const documentText = document.getText();
-
-    console.log('§>', { documentText });
-  }
+const encryptCurrentFile = async () => {
+  const tk: string | undefined = await engine.encrypted(text, pw);
+  const ta: string | undefined = await engine.decrypted(tk, pw);
+  console.log('§>', { text, tk, ta });
 };
 
-const decryptCurrentFile = () => {
-  vscode.window
-    .showInformationMessage(
-      'Ready to DEcrypt the current file',
-      'Ok',
-      'Not Ok',
-      'Retry',
-      'Do Not Retry'
-    )
-    .then((response) => console.log('§>', { response }));
-};
+const decryptCurrentFile = () => {};
 
 export function activate(context: vscode.ExtensionContext) {
   let disposableEncrypt = vscode.commands.registerCommand(
@@ -50,7 +41,7 @@ export function activate(context: vscode.ExtensionContext) {
     }
   );
 
-  let disposableìDecrypt = vscode.commands.registerCommand(
+  let disposableDecrypt = vscode.commands.registerCommand(
     'sams-file-encryptor.decrypt',
     () => {
       decryptCurrentFile();
@@ -58,7 +49,7 @@ export function activate(context: vscode.ExtensionContext) {
   );
 
   context.subscriptions.push(disposableEncrypt);
-  context.subscriptions.push(disposableìDecrypt);
+  context.subscriptions.push(disposableDecrypt);
 }
 
 export function deactivate() {}
