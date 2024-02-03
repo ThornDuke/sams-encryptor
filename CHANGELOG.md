@@ -11,6 +11,13 @@
 
 ## [Unreleased]
 
+### Added
+
+- engine.ts {getCipher}
+- engine.ts {getDecipher}
+- engine.ts {encrypted}
+- engine.ts {decrypted}
+
 ### Removed
 
 - README.md {Table of content}: auto-link
