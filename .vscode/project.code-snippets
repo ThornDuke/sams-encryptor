@@ -7,11 +7,8 @@
       "",
       "<!--",
       "## [major.minor.patch] - yyyy-mm-dd",
-      "### Added",
+      "### Added | Fixed | Changed | Removed | Deprecated | Security",
       "- filena.me {section}: description",
-      "### Fixed",
-      "### Changed",
-      "### Removed",
       "-->",
       "",
       "$0"

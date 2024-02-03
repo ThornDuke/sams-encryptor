@@ -27,8 +27,12 @@
   "contributes": {
     "commands": [
       {
-        "command": "sams-file-encryptor.helloWorld",
-        "title": "Hello World"
+        "command": "sams-file-encryptor.encrypt",
+        "title": "Encrypt file"
+      },
+      {
+        "command": "sams-file-encryptor.decrypt",
+        "title": "Decrypt file"
       }
     ]
   },

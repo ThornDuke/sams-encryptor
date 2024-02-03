@@ -2,11 +2,8 @@
 
 <!--
 ## [major.minor.patch] - yyyy-mm-dd
-### Added
+### Added | Fixed | Changed | Removed | Deprecated | Security
 - filena.me {section}: description
-### Fixed
-### Changed
-### Removed
 -->
 
 ## [Unreleased]
@@ -17,6 +14,9 @@
 - engine.ts {getDecipher}
 - engine.ts {encrypted}
 - engine.ts {decrypted}
+- package.json {contributes.commands}: encrypt; decrypt
+- extension.ts {encryptCurrentFile}
+- extension.ts {decryptCurrentFile}
 
 ### Removed
 

@@ -9,40 +9,56 @@
 import * as vscode from 'vscode';
 import * as engine from './engine';
 
-// This method is called when your extension is activated
-// Your extension is activated the very first time the command is executed
+/* ******************************************************
+ *
+ * to modify text in VSCode:
+ *
+ * https://github.com/Microsoft/vscode-extension-samples/tree/main/document-editing-sample
+ *
+ */
+
+const encryptCurrentFile = () => {
+  const editor = vscode.window.activeTextEditor;
+
+  if (editor) {
+    let document = editor.document;
+
+    // Get the document text
+    const documentText = document.getText();
+
+    console.log('§>', { documentText });
+  }
+};
+
+const decryptCurrentFile = () => {
+  vscode.window
+    .showInformationMessage(
+      'Ready to DEcrypt the current file',
+      'Ok',
+      'Not Ok',
+      'Retry',
+      'Do Not Retry'
+    )
+    .then((response) => console.log('§>', { response }));
+};
+
 export function activate(context: vscode.ExtensionContext) {
-  /* TESTS */
-
-  const text = 'This is a sample text';
-  const pwKey = 'secret';
-
-  const encrText = engine.encrypted(text, pwKey);
-
-  const decrText = engine.decrypted(encrText, pwKey);
-
-  console.log('§> encryption', { text, pwKey, encrText });
-  console.log('===');
-  console.log('§> decryption', { encrText, pwKey, decrText });
-
-  /* END TESTS */
-
-  // The command has been defined in the package.json file
-  // Now provide the implementation of the command with registerCommand
-  // The commandId parameter must match the command field in package.json
-  let disposable = vscode.commands.registerCommand(
-    'sams-file-encryptor.helloWorld',
+  let disposableEncrypt = vscode.commands.registerCommand(
+    'sams-file-encryptor.encrypt',
     () => {
-      // The code you place here will be executed every time your command is executed
-      // Display a message box to the user
-      vscode.window.showInformationMessage(
-        engine.encrypted('Gualalla lalla palla', 'poropero')
-      );
+      encryptCurrentFile();
     }
   );
 
-  context.subscriptions.push(disposable);
+  let disposableìDecrypt = vscode.commands.registerCommand(
+    'sams-file-encryptor.decrypt',
+    () => {
+      decryptCurrentFile();
+    }
+  );
+
+  context.subscriptions.push(disposableEncrypt);
+  context.subscriptions.push(disposableìDecrypt);
 }
 
-// This method is called when your extension is deactivated
 export function deactivate() {}
