@@ -1,9 +1,18 @@
+/**
+ * globals.ts
+ *
+ * Constants and functions used throughout the project.
+ *
+ * First edit: 2024-01-31
+ */
+
 import * as vscode from 'vscode';
 
 /**
  * if true many logs are generated and sent to the console
  */
 export const $$debugging = false;
+export const $$logErrors = true;
 
 /**
  * Name of the key within the configuration file to look

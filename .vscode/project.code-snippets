@@ -1,0 +1,101 @@
+{
+  "Initialize CHANGELOG.md": {
+    "scope": "markdown",
+    "prefix": "changelog-init",
+    "body": [
+      "# Change Log",
+      "",
+      "<!--",
+      "## [major.minor.patch] - yyyy-mm-dd",
+      "### Added",
+      "- filena.me {function}: description",
+      "### Fixed",
+      "### Changed",
+      "### Removed",
+      "-->",
+      "",
+      "$0"
+    ],
+    "description": "Initialize a CHANGELOG.md"
+  },
+  "Unreleased Header": {
+    "scope": "markdown",
+    "prefix": "changelog-unreleased-header",
+    "body": ["## [Unreleased]", "", "$0"],
+    "description": "Insert the `Unreleased` header"
+  },
+  "Header": {
+    "scope": "markdown",
+    "prefix": "changelog-header",
+    "body": [
+      "### ${1|Added,Fixed,Changed,Removed,Deprecated,Security|}",
+      "",
+      "$0"
+    ],
+    "description": "Insert a header"
+  },
+  "Released Header": {
+    "scope": "markdown",
+    "prefix": "changelog-released-header",
+    "body": [
+      "## [${1:major}.${2:minor}.${3:patch}] - ${4:${CURRENT_YEAR}}-${5:${CURRENT_MONTH}}-${6:${CURRENT_DATE}}",
+      "",
+      "$0"
+    ],
+    "description": "Insert a release header"
+  },
+  "New Log Item": {
+    "scope": "markdown",
+    "prefix": "changelog-new-item",
+    "body": ["- ${1:filename}${2: {${3:function}\\}}: ${4:description}"],
+    "description": "Insert a new log item"
+  },
+  "Initialize README.md": {
+    "scope": "markdown",
+    "prefix": "readme-init",
+    "body": [
+      "# ${1:Extension name}",
+      "",
+      "<!--",
+      "Extension description:",
+      "",
+      "- What your application does",
+      "- Why you used the technologies you used",
+      "- Some of the challenges you faced and features you hope to implement in the future",
+      "-->",
+      "",
+      "## Features",
+      "",
+      "## Requirements",
+      "",
+      "## Installation",
+      "",
+      "## How to use",
+      "",
+      "## Managing settings",
+      "",
+      "## Known Issues",
+      "",
+      "## Release Notes",
+      "",
+      "## Contributing",
+      "",
+      "## Acknowledgements",
+      ""
+    ]
+  },
+  "Code file header": {
+    "scope": "javascript, typescript",
+    "prefix": "code-file-header",
+    "body": [
+      "/**",
+      " * ${1:${TM_FILENAME}}",
+      " *",
+      " * ${2:Description}",
+      " *",
+      " * First edit: ${3:${CURRENT_YEAR}}-${4:${CURRENT_MONTH}}-${5:${CURRENT_DATE}}",
+      " */",
+      "$0"
+    ]
+  }
+}

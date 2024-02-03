@@ -1,71 +1,80 @@
-# sams-file-encryptor README
+# Sam's File Encryptor
 
-This is the README for your extension "sams-file-encryptor". After writing up a brief description, we recommend including the following sections.
+![GitHub License](https://img.shields.io/github/license/ThornDuke/sams-pwd-generator?style=plastic&logo=gnu)
+![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/thornduke.sams-file-encryptor.svg?style=plastic&logo=visualstudiocode)
+![Static Badge](https://img.shields.io/badge/strong-security?style=plastic&logo=keepassxc&logoColor=white&label=security&labelColor=black&color=red)
+![Static Badge](https://img.shields.io/badge/enabled-crypto?style=plastic&logo=alienware&logoColor=white&label=crypto&labelColor=black&color=green)
+
+<!--
+![Visual Studio Marketplace Rating Stars](https://img.shields.io/visual-studio-marketplace/stars/thornduke.sams-pw-gen.svg?style=plastic)
+![Visual Studio Marketplace Rating](https://img.shields.io/visual-studio-marketplace/r/thornduke.sams-pw-gen.svg?style=plastic)
+![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/thornduke.sams-pw-gen.svg?style=plastic)
+![Visual Studio Marketplace Downloads](https://img.shields.io/visual-studio-marketplace/d/thornduke.sams-pw-gen.svg?style=plastic)
+-->
+
+## Table of content
+
+- [Table of content](#table-of-content)
+- [Features](#features)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [How to use](#how-to-use)
+- [Managing settings](#managing-settings)
+- [Known Issues](#known-issues)
+- [Release Notes](#release-notes)
+- [Contributing](#contributing)
+- [Acknowledgements](#acknowledgements)
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+[Back to [table of content](#table-of-content)]
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+[Back to [table of content](#table-of-content)]
 
-## Extension Settings
+## Installation
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+1. Open **Extensions** sidebar panel in VS Code. `View → Extensions`
+2. Search for `Sam's File Encryptor`
+3. Click `Install` to install it.
 
-For example:
+[Back to [table of content](#table-of-content)]
 
-This extension contributes the following settings:
+## How to use
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+[Back to [table of content](#table-of-content)]
+
+## Managing settings
+
+[Back to [table of content](#table-of-content)]
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+[Back to [table of content](#table-of-content)]
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
+[Back to [table of content](#table-of-content)]
 
-### 1.0.0
+## Contributing
 
-Initial release of ...
+Contributions to this project are welcomed!
 
-### 1.0.1
+Whether you have
 
-Fixed issue #.
+- questions, concerns, or suggestions for improving this extension
+- want to report a bug
+- submit a fix
+- propose new features
 
-### 1.1.0
+please don't hesitate to reach out to us on GitHub and
+[open an issue](https://github.com/ThornDuke/sams-encryptor/issues).
 
-Added features X, Y, and Z.
+[Back to [table of content](#table-of-content)]
 
----
+## Acknowledgements
 
-## Following extension guidelines
+The icon is created by [Freepik - Flaticon](https://www.flaticon.com)
 
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+[Back to [table of content](#table-of-content)]

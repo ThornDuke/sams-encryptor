@@ -7,9 +7,11 @@
 ### Fixed
 ### Changed
 ### Removed
--->
 
 ## [Unreleased]
+-->
+
+## [0.1.0] - 2024-02-03
 
 - 2024-01-31: First scratch
 
@@ -26,3 +28,7 @@
 - Icon
 - src/globals.ts: created
 - src/globals.ts {getConfigValueAtKey}: created
+- README.md: created and structured
+- engine.ts: created and structured
+- project.code-snippets: created and structured
+- markdown.css: created and structured

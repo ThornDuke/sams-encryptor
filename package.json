@@ -1,7 +1,7 @@
 {
   "name": "sams-file-encryptor",
   "displayName": "Sam's File Encryptor",
-  "description": "A strong file encryptor/decryptor for VSCode",
+  "description": "The definitive solution to easily encrypt/decrypt files in VSCode.",
   "author": "Thorn Duke",
   "publisher": "ThornDuke",
   "version": "0.0.1",
