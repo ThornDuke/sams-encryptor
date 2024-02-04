@@ -1,4 +1,4 @@
-# Sam's File Encryptor
+# Sam's Text Encryptor
 
 ![GitHub License](https://img.shields.io/github/license/ThornDuke/sams-pwd-generator?style=plastic&logo=gnu)
 ![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/thornduke.sams-file-encryptor.svg?style=plastic&logo=visualstudiocode)
@@ -27,6 +27,7 @@
 ## Features
 
 - <https://www.kiteworks.com/risk-compliance-glossary/aes-256-encryption/#:~:text=AES%2D256%20encryption%20is%20extremely%20secure.>
+- It doesnt use `crypto.createCipher`.
 
 [Back to [table of content](#table-of-content)]
 
@@ -37,7 +38,7 @@
 ## Installation
 
 1. Open **Extensions** sidebar panel in VS Code. `View → Extensions`
-2. Search for `Sam's File Encryptor`
+2. Search for `Sam's Text Encryptor`
 3. Click `Install` to install it.
 
 [Back to [table of content](#table-of-content)]
@@ -77,5 +78,7 @@ please don't hesitate to reach out to us on GitHub and
 ## Acknowledgements
 
 The icon is created by [Freepik - Flaticon](https://www.flaticon.com)
+
+Use `CryptoShield`
 
 [Back to [table of content](#table-of-content)]

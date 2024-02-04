@@ -7,11 +7,17 @@
  * First edit: 2024-02-03
  */
 
-// import crypto from 'node:crypto';
 import CryptoShield from 'crypto-shield';
 import { $$debugging, $$logErrors } from './globals';
 
-export const encrypted = async (text: any, pwKey: string) => {
+/**
+ * Encrypt a text using a password
+ *
+ * @param {any} text The text to encrypt
+ * @param {string} pwKey The password
+ * @returns {Promise<string>} t
+ */
+export const encrypt = async (text: any, pwKey: string) => {
   const encryptor = new CryptoShield();
   encryptor.setSecretKey(pwKey);
 
@@ -19,7 +25,7 @@ export const encrypted = async (text: any, pwKey: string) => {
     const encryptedText = await encryptor.encryptText(text);
 
     if ($$debugging) {
-      console.log('§> encrypted', { text, pwKey, encryptedText });
+      console.log('§> encrypt', { text, pwKey, encryptedText });
     }
 
     return encryptedText;
@@ -30,7 +36,14 @@ export const encrypted = async (text: any, pwKey: string) => {
   }
 };
 
-export const decrypted = async (text: any, pwKey: string) => {
+/**
+ * Decrypts a text previously encrypted with a password
+ *
+ * @param {any} text The text to decrypt
+ * @param {string} pwKey The password
+ * @returns {Promise<string} A promise that eventually returns a string
+ */
+export const decrypt = async (text: any, pwKey: string) => {
   const decryptor = new CryptoShield();
   decryptor.setSecretKey(pwKey);
 
@@ -38,7 +51,7 @@ export const decrypted = async (text: any, pwKey: string) => {
     const decryptedText = await decryptor.decryptText(text);
 
     if ($$debugging) {
-      console.log('§> decrypted', { text, pwKey, decryptedText });
+      console.log('§> decrypt', { text, pwKey, decryptedText });
     }
 
     return decryptedText;

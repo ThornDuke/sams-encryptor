@@ -3,7 +3,7 @@
 <!--
 ## [major.minor.patch] - yyyy-mm-dd
 ### Added | Fixed | Changed | Removed | Deprecated | Security
-- filena.me {section}: description
+- filename {section}: description
 -->
 
 ## [Unreleased]
@@ -18,11 +18,13 @@
 - extension.ts {encryptCurrentFile}
 - extension.ts {decryptCurrentFile}
 - Now use CryptoShield
+- engine.test.ts: suit of tests
 
 ### Changed
 
-- engine.ts {encrypted}
-- engine.ts {decrypted}
+- engine.ts {encrypted}: supported by CryptoShield
+- engine.ts {decrypted}: supported by CryptoShield
+- The name of the project now is: `Sam's Text Encryptor`
 
 ### Removed
 
