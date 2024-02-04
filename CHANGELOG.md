@@ -15,10 +15,10 @@
 - engine.ts {encrypted}
 - engine.ts {decrypted}
 - package.json {contributes.commands}: encrypt; decrypt
-- extension.ts {encryptCurrentFile}
-- extension.ts {decryptCurrentFile}
 - Now use CryptoShield
-- engine.test.ts: suit of tests
+- engine.test.ts: suite of test
+- extension.ts {applyToCurrentFile}: encrypt or decrypt the text in the file
+  based on the parameter passed to the function
 
 ### Changed
 
@@ -31,6 +31,8 @@
 - README.md {Table of content}: auto-link
 - engine.ts {getCipher}: rendered useless by CryptoShield
 - engine.ts {getDecipher}: rendered useless by CryptoShield
+- extension.ts {encryptCurrentFile}: rendered useless by applyToCurrentFile
+- extension.ts {decryptCurrentFile}: rendered useless by applyToCurrentFile
 
 ## [0.1.0] - 2024-02-03
 

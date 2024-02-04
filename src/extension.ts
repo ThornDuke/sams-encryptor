@@ -25,32 +25,45 @@ import crypto from 'node:crypto';
 // ********************
 // CODICE DI PROVA. VA CANCELLATO PRIMA DEL RILASCIO
 //
-const text =
-  'Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa.';
 const pw = 'sammarino';
 
-const encryptCurrentFile = async () => {
-  const tk: string | undefined = await engine.encrypt(text, pw);
-  const ta: string | undefined = await engine.decrypt(tk, pw);
-  console.log('§>', { text, tk, ta });
+const applyToCurrentFile = (operation: Function) => {
+  const editor = vscode.window.activeTextEditor;
+  if (!editor) return;
+  const text = editor.document.getText();
+  let lastLine = editor.document.lineCount - 1;
+  if (lastLine < 0) {
+    lastLine = 0;
+  }
+  let lastChar = editor.document.lineAt(lastLine).text.length;
+  if (lastChar <= 0) {
+    lastChar = 1;
+  }
+  editor.selection = new vscode.Selection(
+    new vscode.Position(0, 0),
+    new vscode.Position(lastLine, lastChar)
+  );
+  operation(text, pw).then((encrText: string) => {
+    editor.edit((editBuilder) => {
+      editBuilder.delete(editor.selection);
+      editBuilder.insert(new vscode.Position(0, 0), encrText);
+    });
+  });
 };
-
-const decryptCurrentFile = () => {};
-//
 // *********************
 
 export function activate(context: vscode.ExtensionContext) {
   let disposableEncrypt = vscode.commands.registerCommand(
     'sams-file-encryptor.encrypt',
     () => {
-      encryptCurrentFile();
+      applyToCurrentFile(engine.encrypt);
     }
   );
 
   let disposableDecrypt = vscode.commands.registerCommand(
     'sams-file-encryptor.decrypt',
     () => {
-      decryptCurrentFile();
+      applyToCurrentFile(engine.decrypt);
     }
   );
 
