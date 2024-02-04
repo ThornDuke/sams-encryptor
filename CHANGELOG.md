@@ -6,7 +6,9 @@
 - filename {section}: description
 -->
 
-## [Unreleased]
+## [0.2.0] - 2024-02-04
+
+The extension fully works.
 
 ### Added
 
@@ -19,6 +21,7 @@
 - engine.test.ts: suite of test
 - extension.ts {applyToCurrentFile}: encrypt or decrypt the text in the file
   based on the parameter passed to the function
+- extension.ts {getUserKey}: ask the user for a key
 
 ### Changed
 
