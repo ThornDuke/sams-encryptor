@@ -15,7 +15,6 @@
 ## Table of content
 
 - [Features](#features)
-- [Requirements](#requirements)
 - [Installation](#installation)
 - [How to use](#how-to-use)
 - [Managing settings](#managing-settings)
@@ -26,12 +25,14 @@
 
 ## Features
 
-- <https://www.kiteworks.com/risk-compliance-glossary/aes-256-encryption/#:~:text=AES%2D256%20encryption%20is%20extremely%20secure.>
-- It doesnt use `crypto.createCipher`.
+It is an extension that encrypts and decrypts the text present in the current
+window. It was designed to securely encrypt an entire file and to do so with
+maximum simplicity.
 
-[Back to [table of content](#table-of-content)]
-
-## Requirements
+It uses the latest updates to the `crypto` library and the `aes-256-gcm`
+algorithm, which ensure the
+[highest level of security](https://www.kiteworks.com/risk-compliance-glossary/aes-256-encryption/#:~:text=AES%2D256%20encryption%20is%20extremely%20secure.)
+that can be achieved today.
 
 [Back to [table of content](#table-of-content)]
 
@@ -45,17 +46,51 @@
 
 ## How to use
 
+At any time, you can press `⌘ + ⇧ + P` on Mac or `Control + ⇧ + P` on Windows /
+Linux and start typing `Password`.
+
+You can choose from the following commands:
+
+- `Encrypt file`
+- `Decrypt file`
+
+Choose one of the two commands. You will be asked to enter a key and then asked
+to confirm it.
+
+Once the key is entered the file will be encrypted or decrypted depending on the
+command chosen.
+
+<div style="background-color: yellow; color: red; text-align: center; font-weight: bold; font-size:1.75em; margin-bottom: 1em">WARNING</div>
+
+1. **If you forget the key it will no longer be possible to decrypt the file.**
+2. **If you modify an encrypted file it will no longer be possible to decrypt it
+   and the original content will be lost.**
+
+These risks are inherent to modern encryption systems: they are powerful but
+dangerous.
+
 [Back to [table of content](#table-of-content)]
 
 ## Managing settings
+
+There are no configuration parameters. This extension was built with the
+intention of hiding the complexities inherent in modern encryption systems.
+
+I don't rule out the possibility of modifying some parameters in the future, but
+for the moment I prefer to focus on the robustness and reliability of the
+extension.
 
 [Back to [table of content](#table-of-content)]
 
 ## Known Issues
 
+There are no known issues.
+
 [Back to [table of content](#table-of-content)]
 
 ## Release Notes
+
+To know the release notes refer to the `CHANGELOG` file.
 
 [Back to [table of content](#table-of-content)]
 
@@ -77,8 +112,10 @@ please don't hesitate to reach out to us on GitHub and
 
 ## Acknowledgements
 
-The icon is created by [Freepik - Flaticon](https://www.flaticon.com)
+The engine of this extension is based on the
+[crypto-shield package](https://socket.dev/npm/package/crypto-shield), which I
+choosed after studying the code.
 
-Use `CryptoShield`
+The icon is created by [Freepik - Flaticon](https://www.flaticon.com)
 
 [Back to [table of content](#table-of-content)]

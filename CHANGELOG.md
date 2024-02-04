@@ -6,6 +6,10 @@
 - filename {section}: description
 -->
 
+## [1.0.0] - 2024-02-04
+
+First working release.
+
 ## [0.2.0] - 2024-02-04
 
 The extension fully works.
@@ -28,6 +32,7 @@ The extension fully works.
 - engine.ts {encrypted}: supported by CryptoShield
 - engine.ts {decrypted}: supported by CryptoShield
 - The name of the project now is: `Sam's Text Encryptor`
+- README.md: fully filled out.
 
 ### Removed
 

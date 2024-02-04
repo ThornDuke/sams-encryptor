@@ -4,7 +4,7 @@
   "description": "The definitive solution to easily encrypt/decrypt files in VSCode.",
   "author": "Thorn Duke",
   "publisher": "ThornDuke",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "icon": "resources/encryption.png",
   "galleryBanner": {
     "theme": "dark",

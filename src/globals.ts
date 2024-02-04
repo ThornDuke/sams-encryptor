@@ -11,7 +11,7 @@ import * as vscode from 'vscode';
 /**
  * if true many logs are generated and sent to the console
  */
-export const $$debugging = true;
+export const $$debugging = false;
 export const $$logErrors = true;
 
 /**
