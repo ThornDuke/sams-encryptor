@@ -6,3 +6,4 @@ node_modules
 *-notes.md
 *-quickstart.md
 .DS_Store
+**/mock.md

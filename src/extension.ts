@@ -12,7 +12,9 @@ import { $$logErrors } from './globals';
 
 const applyToCurrentFile = (operation: Function, key: string) => {
   const editor = vscode.window.activeTextEditor;
-  if (!editor) return;
+  if (!editor) {
+    return;
+  }
   const text = editor.document.getText();
   let lastLine = editor.document.lineCount - 1;
   if (lastLine < 0) {

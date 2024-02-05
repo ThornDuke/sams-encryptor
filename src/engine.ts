@@ -41,7 +41,7 @@ export const encrypt = async (text: any, pwKey: string) => {
  *
  * @param {any} text The text to decrypt
  * @param {string} pwKey The password
- * @returns {Promise<string} A promise that eventually returns a string
+ * @returns {Promise<string>} A promise that eventually returns a string
  */
 export const decrypt = async (text: any, pwKey: string) => {
   const decryptor = new CryptoShield();
