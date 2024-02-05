@@ -12,7 +12,11 @@
 ![Visual Studio Marketplace Downloads](https://img.shields.io/visual-studio-marketplace/d/thornduke.sams-pw-gen.svg?style=plastic)
 -->
 
-<img src="./resources/demo.gif" alt="Demo" width="600">
+<img
+  src="https://github.com/ThornDuke/sams-encryptor/raw/master/resources/demo.gif"
+  alt="Demo"
+  width="650"
+/>
 
 ## Table of content
 
