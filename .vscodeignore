@@ -11,6 +11,8 @@ project-notes.md
 **/*.ts
 **/.vscode-test.*
 **/*.gif
+resources/*.gif
+resources/*.md
 .DS_Store
 **/mock.md
 **/typescript

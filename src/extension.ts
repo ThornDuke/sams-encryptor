@@ -53,28 +53,32 @@ const getUserKey = async (context: 'encryption' | 'decryption') => {
     }
   }
 
-  const secondKey = await vscode.window.showInputBox({
-    password: true,
-    placeHolder: 'Your secret key',
-    prompt: 'Confirm your key',
-    title: `File ${context}`,
-  });
+  if (context === 'encryption') {
+    const secondKey = await vscode.window.showInputBox({
+      password: true,
+      placeHolder: 'Your secret key',
+      prompt: 'Confirm your key',
+      title: `File ${context}`,
+    });
 
-  if (!secondKey) {
-    if ($$logErrors) {
-      console.log(
-        '§> getUserKey: There is no key or the key is invalid. Procedure aborted.'
-      );
+    if (!secondKey) {
+      if ($$logErrors) {
+        console.log(
+          '§> getUserKey: There is no key or the key is invalid. Procedure aborted.'
+        );
+        return;
+      }
+    }
+
+    if (firstKey === secondKey) {
+      return firstKey;
+    } else {
+      console.log('§>', 'Key mismatch. Procedure aborted');
       return;
     }
   }
 
-  if (firstKey === secondKey) {
-    return firstKey;
-  } else {
-    console.log('§>', 'Key mismatch. Procedure aborted');
-    return;
-  }
+  return firstKey;
 };
 
 export function activate(context: vscode.ExtensionContext) {

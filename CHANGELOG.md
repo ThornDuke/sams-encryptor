@@ -6,6 +6,22 @@
 - filename {section}: description
 -->
 
+## [1.0.1] - 2024-02-05
+
+### Added
+
+- demo.gif: A video for the `README` file
+
+### Fixed
+
+- .vscodeignore: typescript no more inserted into the bundle
+
+### Changed
+
+- Icon
+- extension.ts {getUserKey}: If encrypting the user is asked to inserts the key
+  twice; if decrypting the user is asked to insert the key once.
+
 ## [1.0.0] - 2024-02-04
 
 First working release.

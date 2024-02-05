@@ -12,6 +12,8 @@
 ![Visual Studio Marketplace Downloads](https://img.shields.io/visual-studio-marketplace/d/thornduke.sams-pw-gen.svg?style=plastic)
 -->
 
+<img src="./resources/demo.gif" alt="Demo" width="600">
+
 ## Table of content
 
 - [Features](#features)
@@ -47,20 +49,20 @@ that can be achieved today.
 ## How to use
 
 At any time, you can press `⌘ + ⇧ + P` on Mac or `Control + ⇧ + P` on Windows /
-Linux and start typing `Password`.
+Linux and start typing `Encrypt` or `Decrypt`.
 
 You can choose from the following commands:
 
 - `Encrypt file`
 - `Decrypt file`
 
-Choose one of the two commands. You will be asked to enter a key and then asked
-to confirm it.
+Choose one of the two commands. You will be asked to enter a key; if you have
+chosen to encrypt a file you will be asked to confirm the key entered.
 
 Once the key is entered the file will be encrypted or decrypted depending on the
 command chosen.
 
-<div style="background-color: yellow; color: red; text-align: center; font-weight: bold; font-size:1.75em; margin-bottom: 1em">WARNING</div>
+**WARNING!**
 
 1. **If you forget the key it will no longer be possible to decrypt the file.**
 2. **If you modify an encrypted file it will no longer be possible to decrypt it

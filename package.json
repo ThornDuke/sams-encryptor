@@ -1,11 +1,11 @@
 {
   "name": "sams-file-encryptor",
   "displayName": "Sam's Text Encryptor",
-  "description": "The definitive solution to easily encrypt/decrypt files in VSCode.",
+  "description": "The rock solid solution to easily encrypt/decrypt files in VSCode.",
   "author": "Thorn Duke",
   "publisher": "ThornDuke",
-  "version": "1.0.0",
-  "icon": "resources/encryption.png",
+  "version": "1.0.1",
+  "icon": "resources/encrypted.png",
   "galleryBanner": {
     "theme": "dark",
     "color": "#001b33"
