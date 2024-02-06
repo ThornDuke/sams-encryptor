@@ -8,6 +8,15 @@
 
 ## [Unreleased]
 
+### Added
+
+- package.json {contributes.configuration}: added the `showKeyInPlainText`
+  parameter
+- extension.ts {getUserKey}: implemented the `showKeyInPlainText` parameter
+  functionality
+- extension.ts {activate}: added a success message after encryption and
+  decryption
+
 ### Changed
 
 - README.md {Features}: more explanatory text
