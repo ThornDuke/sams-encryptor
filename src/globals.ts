@@ -25,8 +25,8 @@ export const $$logErrors = true;
 export const configKey = 'samtextencryptor';
 
 /**
- * Takes a string representing a `setting.json => sam-encryptor
- * key and returns the value for that key. The `sam-encryptor`
+ * Takes a string representing a `setting.json => samtextencryptor`
+ * key and returns the value for that key. The `samtextencryptor`
  * part of the key is hardcoded into the method
  *
  * @param {string} key

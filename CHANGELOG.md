@@ -3,7 +3,7 @@
 <!--
 ## [Unreleased] | [major.minor.patch] - yyyy-mm-dd
 ### Added | Fixed | Changed | Removed | Deprecated | Security
-- filename {section}: description
+- description | filename {section}: description
 -->
 
 ## [Unreleased]
@@ -20,6 +20,7 @@
 ### Changed
 
 - README.md {Features}: more explanatory text
+- README.md {Managing settings}: documentation for the new setting parameter
 
 ## [1.0.1] - 2024-02-05
 

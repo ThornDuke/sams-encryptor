@@ -24,22 +24,20 @@
 - [Installation](#installation)
 - [How to use](#how-to-use)
 - [Managing settings](#managing-settings)
-- [Known Issues](#known-issues)
 - [Release Notes](#release-notes)
 - [Contributing](#contributing)
 - [Acknowledgements](#acknowledgements)
 
 ## Features
 
-It is an extension that encrypts and decrypts the text present in the current
-window. It was designed to securely encrypt an entire file and to do so with
-maximum simplicity.
+This extension encrypts and decrypts the text present in the current window. It
+was designed to securely encrypt an entire file and to do so with maximum
+simplicity.
 
 It uses the latest updates to the `crypto` library and the `aes-256-gcm`
 algorithm, which is extremely secure. It is the most secure encryption algorithm
 available today and is used extensively in government and military applications,
-as well as by businesses operating in highly regulated industries. that can be
-achieved today.
+as well as by businesses operating in highly regulated industries.
 
 [Back to [table of content](#table-of-content)]
 
@@ -80,18 +78,25 @@ dangerous.
 
 ## Managing settings
 
-There are no configuration parameters. This extension was built with the
-intention of hiding the complexities inherent in modern encryption systems.
+Click on `Manage / Extension settings`. There is one setting:
 
-I don't rule out the possibility of modifying some parameters in the future, but
-for the moment I prefer to focus on the robustness and reliability of the
-extension.
+`Show Key In Plain Text` It should be set to `true` to make the
+encryption/decryption key readable in plain text as you type it. Default is
+`false`
 
-[Back to [table of content](#table-of-content)]
+Alternatively, you can change the values ​​directly in the configuration file:
 
-## Known Issues
+1. Open the command palette (either with `F1` or `Ctrl+Shift+P` or
+   `Shift+Command+P`)
+2. Type `open settings`
+3. You are presented with a few options, choose `Open User Settings (JSON)`
+4. Add or modify the following line.
 
-There are no known issues.
+```json
+{
+  "samtextencryptor.showKeyInPlainText": false
+}
+```
 
 [Back to [table of content](#table-of-content)]
 
