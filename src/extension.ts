@@ -89,7 +89,16 @@ export function activate(context: vscode.ExtensionContext) {
     () => {
       getUserKey('encryption').then((key) => {
         if (key) {
-          applyToCurrentFile(engine.encrypt, key);
+          try {
+            applyToCurrentFile(engine.encrypt, key);
+            vscode.window.showInformationMessage(
+              'Document successfully encrypted.'
+            );
+          } catch {
+            if ($$logErrors) {
+              console.log('§> Error encrypting the file');
+            }
+          }
         }
       });
     }
@@ -100,7 +109,16 @@ export function activate(context: vscode.ExtensionContext) {
     () => {
       getUserKey('decryption').then((key) => {
         if (key) {
-          applyToCurrentFile(engine.decrypt, key);
+          try {
+            applyToCurrentFile(engine.decrypt, key);
+            vscode.window.showInformationMessage(
+              'Document successfully decrypted.'
+            );
+          } catch {
+            if ($$logErrors) {
+              console.log('§> Error encrypting the file');
+            }
+          }
         }
       });
     }
