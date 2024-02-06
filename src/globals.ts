@@ -22,7 +22,7 @@ export const $$logErrors = true;
  * !!! in the `package.json` file, into the key      !!!
  * !!! `contributes.configuration.properties`        !!!
  */
-export const configKey = 'sam-encryptor';
+export const configKey = 'samtextencryptor';
 
 /**
  * Takes a string representing a `setting.json => sam-encryptor

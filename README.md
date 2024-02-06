@@ -36,9 +36,10 @@ window. It was designed to securely encrypt an entire file and to do so with
 maximum simplicity.
 
 It uses the latest updates to the `crypto` library and the `aes-256-gcm`
-algorithm, which ensure the
-[highest level of security](https://www.kiteworks.com/risk-compliance-glossary/aes-256-encryption/#:~:text=AES%2D256%20encryption%20is%20extremely%20secure.)
-that can be achieved today.
+algorithm, which is extremely secure. It is the most secure encryption algorithm
+available today and is used extensively in government and military applications,
+as well as by businesses operating in highly regulated industries. that can be
+achieved today.
 
 [Back to [table of content](#table-of-content)]
 

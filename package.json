@@ -22,7 +22,9 @@
     "encryption",
     "decryption"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
@@ -33,6 +35,19 @@
       {
         "command": "sams-file-encryptor.decrypt",
         "title": "Decrypt file"
+      }
+    ],
+    "configuration": [
+      {
+        "title": "Sam's Text Encryptor",
+        "properties": {
+          "samtextencryptor.showKeyInPlainText": {
+            "type": "boolean",
+            "default": false,
+            "order": 0,
+            "markdownDescription": "If `true` the key entered by the user is shown in plain text. Default: `false`."
+          }
+        }
       }
     ]
   },

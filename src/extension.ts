@@ -8,7 +8,7 @@
 
 import * as vscode from 'vscode';
 import * as engine from './engine';
-import { $$logErrors } from './globals';
+import { $$logErrors, getConfigValueAtKey } from './globals';
 
 const applyToCurrentFile = (operation: Function, key: string) => {
   const editor = vscode.window.activeTextEditor;
@@ -37,8 +37,10 @@ const applyToCurrentFile = (operation: Function, key: string) => {
 };
 
 const getUserKey = async (context: 'encryption' | 'decryption') => {
+  let hideKey = getConfigValueAtKey('showKeyInPlainText');
+
   const firstKey = await vscode.window.showInputBox({
-    password: true,
+    password: !hideKey,
     placeHolder: 'Your secret key',
     prompt: 'Type a key',
     title: `File ${context}`,
@@ -55,7 +57,7 @@ const getUserKey = async (context: 'encryption' | 'decryption') => {
 
   if (context === 'encryption') {
     const secondKey = await vscode.window.showInputBox({
-      password: true,
+      password: !hideKey,
       placeHolder: 'Your secret key',
       prompt: 'Confirm your key',
       title: `File ${context}`,

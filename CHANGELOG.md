@@ -6,6 +6,12 @@
 - filename {section}: description
 -->
 
+## [Unreleased]
+
+### Changed
+
+- README.md {Features}: more explanatory text
+
 ## [1.0.1] - 2024-02-05
 
 ### Added
