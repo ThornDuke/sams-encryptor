@@ -16,6 +16,8 @@
   functionality
 - extension.ts {activate}: added a success message after encryption and
   decryption
+- README.md {Disclaimer}
+- Added a disclaimer in every code file.
 
 ### Changed
 
