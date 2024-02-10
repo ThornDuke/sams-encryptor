@@ -6,7 +6,7 @@
 - description | filename {section}: description
 -->
 
-## [Unreleased]
+## [1.2.2] - 2024-02-10
 
 ### Added
 
